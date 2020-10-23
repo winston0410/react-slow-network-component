@@ -1,11 +1,11 @@
 {
-  "name": "@blackblock/react-image-component",
+  "name": "@blackblock/react-slow-network-component",
   "version": "0.1.0",
   "description": "",
   "keywords": [
     "react",
     "react-component",
-    "react-image-component"
+    "react-slow-network-component"
   ],
   "husky": {
     "hooks": {
@@ -25,10 +25,14 @@
   },
   "author": "Hugo Sum",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/winston0410/react-anchor-heading/issues"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/winston0410/react-slow-network-component.git"
   },
-  "homepage": "https://github.com/winston0410/react-anchor-heading#readme",
+  "bugs": {
+    "url": "https://github.com/winston0410/react-slow-network-component/issues"
+  },
+  "homepage": "https://github.com/winston0410/react-slow-network-component#readme",
   "files": [
     "dist/"
   ],
