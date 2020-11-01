@@ -38,7 +38,8 @@
   ],
   "scripts": {
     "test": "npx mocha --recursive './test/**/*.js' --require @babel/register --require esm",
-    "build": "npx spago bundle-module --main Helper --to src/utilities/_Helper.js && NODE_ENV=production npx rollup -c;",
+    "build": "NODE_ENV=production npx rollup -c;",
+    "dev": "NODE_ENV=development npx rollup -c -w;",
     "prepublish": "npm run build"
   },
   "peerDependencies": {
@@ -71,6 +72,8 @@
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-standard": "^4.0.2",
+    "eslint-plugin-react": "^7.21.5",
+    "eslint-plugin-react-hooks": "^4.2.0",
     "esm": "3.2.25",
     "global-jsdom": "^7.0.0",
     "husky": "^4.3.0",

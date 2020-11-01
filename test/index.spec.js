@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import Img from '../src/index.js'
+import SlowNetwork from '../src/index.js'
 const chai = require('chai')
 const expect = chai.expect
 chai.use(require('chai-dom'))
