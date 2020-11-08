@@ -2,19 +2,15 @@ import React, { useState, useEffect, useCallback } from 'react'
 import {
   isSlowNetwork as _isSlowNetwork
 } from '@blackblock/slow-network-checker'
-
-// Mock network hook
-const useNetworkStatus = ''
-
-// Pass
+import { useNetwork } from 'react-use'
 
 function useSlowNetwork (definition) {
   const [slowNetworkSignal, setSlowNetworkSignal] = useState(false)
-  const networkStatus = useNetworkStatus()
+  const networkStatus = useNetwork()
 
   const checkNetwork = useCallback(() => setSlowNetworkSignal(
     _isSlowNetwork(definition, networkStatus)
-  ))
+  ), [networkStatus, definition])
 
   useEffect(() => {
     const networkInformation = navigator.connection || navigator.mozConnection || navigator.webkitConnection
