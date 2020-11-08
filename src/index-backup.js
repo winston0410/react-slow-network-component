@@ -5,6 +5,9 @@ import {
 import {
   isSlowNetwork
 } from '@blackblock/slow-network-checker'
+import {
+  useNetwork
+} from 'react-use'
 
 const defaultDef = {
   effectiveType: '2g',
