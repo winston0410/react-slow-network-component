@@ -11,16 +11,16 @@ function useSlowNetwork (definition) {
   const checkNetwork = useCallback(() => setSlowNetworkSignal(
     _isSlowNetwork(definition, networkStatus)
   ), [networkStatus, definition])
-
-  useEffect(() => {
-    const networkInformation = navigator.connection || navigator.mozConnection || navigator.webkitConnection
-
-    networkInformation.addEventListener('change', checkNetwork)
-
-    return () => {
-      networkInformation.removeEventListener('change', checkNetwork)
-    }
-  })
+  //
+  // useEffect(() => {
+  //   const networkInformation = navigator.connection || navigator.mozConnection || navigator.webkitConnection
+  //
+  //   networkInformation.addEventListener('change', checkNetwork)
+  //
+  //   return () => {
+  //     networkInformation.removeEventListener('change', checkNetwork)
+  //   }
+  // })
 
   return slowNetworkSignal
 }
