@@ -8,9 +8,11 @@ function useSlowNetwork (definition) {
   const [slowNetworkSignal, setSlowNetworkSignal] = useState(false)
   const networkStatus = useNetwork()
 
-  const checkNetwork = useCallback(() => setSlowNetworkSignal(
-    _isSlowNetwork(definition, networkStatus)
-  ), [networkStatus, definition])
+  const checkNetwork = useCallback(() => {
+    setSlowNetworkSignal(
+      _isSlowNetwork(definition, networkStatus)
+    )
+  }, [networkStatus, definition])
   //
   // useEffect(() => {
   //   const networkInformation = navigator.connection || navigator.mozConnection || navigator.webkitConnection
@@ -22,7 +24,7 @@ function useSlowNetwork (definition) {
   //   }
   // })
 
-  return slowNetworkSignal
+  return [slowNetworkSignal, checkNetwork]
 }
 
 export default useSlowNetwork

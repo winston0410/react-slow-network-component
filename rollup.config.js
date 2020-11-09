@@ -52,7 +52,7 @@ export default [{
     }),
     nodeResolve({}),
     commonjs({
-      include: ['./src/**', 'node_modules/**']
+      include: ['./src/**', /node_modules/]
     })
   ]
 }]
