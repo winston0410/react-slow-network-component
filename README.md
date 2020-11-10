@@ -4,6 +4,8 @@
 
 A component that selectively shows content when the user's network is too slow, utilizing [NetworkInformation API](https://developer.mozilla.org/en-US/docs/Web/API/NetworkInformation/downlink).
 
+This package handles and differentiates status for offline and slow network.
+
 ## Installation
 
 ```
